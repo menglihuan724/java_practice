@@ -1,8 +1,14 @@
 package bf;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class DoubleSingletion {
     public  static DoubleSingletion doubleSingletion;
     public  static DoubleSingletion getInstance(){
+        ArrayList a=new ArrayList();
+        HashSet
         if (doubleSingletion==null){
             try {
                 Thread.sleep(2000);
