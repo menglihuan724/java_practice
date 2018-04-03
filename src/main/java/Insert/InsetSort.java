@@ -1,4 +1,4 @@
-package kspx;
+package Insert;
 
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
