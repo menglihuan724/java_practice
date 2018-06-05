@@ -1,8 +1,6 @@
-package bf;
+package Design.bf;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class DoubleSingletion {
     public  static DoubleSingletion doubleSingletion;

@@ -1,4 +1,4 @@
-package gbpx;
+package Sort.gbpx;
 
 import java.util.Arrays;
 //归并排序是一种比较占内存，但却效率高且稳定的算法,注解非递归方法效率更高,且不容易出现溢出,O(nlogn)

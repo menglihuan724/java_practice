@@ -1,7 +1,6 @@
-package Insert;
+package Insertpx;
 
 import java.util.*;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class InsetSort {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package kspx;
+package Sort.kspx;
 
 import java.util.Arrays;
 /*不稳定,平均性能是最好的。最坏O(2^N),最好O(nlogN)*/

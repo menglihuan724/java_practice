@@ -1,4 +1,4 @@
-package kspx;
+package Sort.kspx;
 
 import java.util.Arrays;
 

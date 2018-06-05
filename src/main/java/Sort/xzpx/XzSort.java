@@ -1,4 +1,4 @@
-package xzpx;
+package Sort.xzpx;
 
 import java.util.Arrays;
 
