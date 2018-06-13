@@ -29,6 +29,7 @@ public class WordCountBolt extends BaseRichBolt {
      * 但是，通常情况下最好是在构造函数中对基本数据类型和可序列化的对象进行复制和实例化
      * 而在prepare()方法中对不可序列化的对象进行实例化。
      */
+    @Override
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector = collector;
         this.counts = new HashMap<String, Long>();
@@ -39,6 +40,7 @@ public class WordCountBolt extends BaseRichBolt {
      * 然后增加计数并存储,发出一个新的词和当前计数组成的二元组。
      * 发射计数作为流允许拓扑的其他bolt订阅和执行额外的处理。
      */
+    @Override
     public void execute(Tuple input) {
         String word = input.getStringByField("word");
         Long count = this.counts.get(word);
@@ -53,6 +55,7 @@ public class WordCountBolt extends BaseRichBolt {
     /**
      *
      */
+    @Override
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
         //声明一个输出流，其中tuple包括了单词和对应的计数，向后发射
         //其他bolt可以订阅这个数据流进一步处理

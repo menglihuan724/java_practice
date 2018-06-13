@@ -27,6 +27,7 @@ public class SplitSentenceBolt extends BaseRichBolt {
      * 本例子和SentenceSpout类一样,SplitSentenceBolt类不需要太多额外的初始化,
      * 所以prepare()方法只保存OutputCollector对象的引用。
      */
+    @Override
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector=collector;
 
@@ -38,17 +39,20 @@ public class SplitSentenceBolt extends BaseRichBolt {
      * 本例中,收到的元组中查找“sentence”的值,
      * 并将该值拆分成单个的词,然后按单词发出新的tuple。
      */
+    @Override
     public void execute(Tuple input) {
         String sentence = input.getStringByField("sentence");
         String[] words = sentence.split(" ");
         for (String word : words) {
-            this.collector.emit(new Values(word));//向下一个bolt发射数据
+            //向下一个bolt发射数据
+            this.collector.emit(new Values(word));
         }
     }
 
     /**
      * plitSentenceBolt类定义一个元组流,每个包含一个字段(“word”)。
      */
+    @Override
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
         declarer.declare(new Fields("word"));
     }
