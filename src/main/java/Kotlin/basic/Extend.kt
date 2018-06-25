@@ -18,7 +18,7 @@ interface B {
     fun b() { print("b") }
 }
 
-class C(override var y:Int) : A() , B {
+class C2(override var y:Int) : A() , B {
     override var x=2
     override fun f() {
         super<A>.f()//调用 A.f()
@@ -27,7 +27,7 @@ class C(override var y:Int) : A() , B {
 }
 
 fun main(args: Array<String>) {
-    val c = C(7)
+    val c = C2(7)
     c.f();
     println(c.x)
     println(c.y)
