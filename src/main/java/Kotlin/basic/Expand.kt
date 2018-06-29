@@ -39,8 +39,6 @@ class C1:C(){
     override fun D1.bar(){
         println("D1 in c1")
     }
-
-
 }
 fun main(args: Array<String>) {
     var x=null
