@@ -1,7 +1,8 @@
 package java8;
 
-import java.util.*;
-import java.util.stream.Collector;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class StreamDemo {
