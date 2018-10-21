@@ -30,7 +30,6 @@ public class SplitSentenceBolt extends BaseRichBolt {
     @Override
     public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
         this.collector=collector;
-
     }
 
     /**

@@ -1,7 +1,6 @@
-package Lock;
+package Thread.Lock;
 
-import java.util.*;
-import java.util.concurrent.locks.ReentrantLock;
+
 
 enum AccountType
 {

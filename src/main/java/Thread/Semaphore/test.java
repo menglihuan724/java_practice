@@ -10,17 +10,14 @@ public class test {
     private  static Semaphore semaphore=new Semaphore(10);
     public static void main(String[] args) {
         for (int i = 0; i <num ; i++) {
-            threadPool.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        semaphore.acquire();
-                    } catch (InterruptedException e) {
+            threadPool.execute(() -> {
+                try {
+                    semaphore.acquire();
+                } catch (InterruptedException e) {
 
-                    }
-                    System.out.println("save data");
-                    semaphore.release();
                 }
+                System.out.println("save data");
+                semaphore.release();
             });
         }
         threadPool.shutdown();
