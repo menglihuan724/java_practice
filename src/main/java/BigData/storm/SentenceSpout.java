@@ -48,6 +48,7 @@ public class SentenceSpout  extends BaseRichSpout {
         index++;
         if (index>=sentences.length) {
             index=0;
+            return;
         }
         Utils.sleep(1);
     }

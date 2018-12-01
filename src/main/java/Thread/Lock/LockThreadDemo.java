@@ -1,14 +1,11 @@
-package Thread.Communication;
+package Thread.Lock;
 
 import org.jetbrains.annotations.NotNull;
-import org.springframework.util.StringUtils;
 
 import java.text.MessageFormat;
-import java.util.Map;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.function.Function;
 
 /**
  * @Description:Re

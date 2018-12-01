@@ -1,8 +1,8 @@
 package Exception;
 
-public class unException {
+public class UnException {
 	public static void main(String[] args) {
-		unException.sql();
+		UnException.sql();
 	}
 	public static void sql(){
 		try{
@@ -13,3 +13,5 @@ public class unException {
 	}
 
 }
+
+

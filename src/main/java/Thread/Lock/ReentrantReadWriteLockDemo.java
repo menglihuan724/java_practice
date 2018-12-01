@@ -1,7 +1,6 @@
-package Thread.Communication;
+package Thread.Lock;
 
 import java.text.MessageFormat;
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
