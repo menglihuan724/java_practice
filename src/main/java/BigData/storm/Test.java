@@ -31,7 +31,7 @@ public class Test {
 
 
         //设置两个Executeor(线程)，默认一个
-        builder.setSpout(SENTENCE_SPOUT_ID, spout,2);
+        builder.setSpout(SENTENCE_SPOUT_ID, spout,1);
 
         // SentenceSpout --> SplitSentenceBolt
 
@@ -55,13 +55,14 @@ public class Test {
 
         //Config类是一个HashMap<String,Object>的子类，用来配置topology运行时的行为
         Config config = new Config();
+        config.setNumWorkers(2);
         //设置worker数量
         LocalCluster cluster = new LocalCluster();
 
         //本地提交
         cluster.submitTopology(TOPOLOGY_NAME, config, builder.createTopology());
 
-        Utils.sleep(100000);
+        Utils.sleep(10000);
         cluster.killTopology(TOPOLOGY_NAME);
         cluster.shutdown();
 
