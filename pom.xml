@@ -95,7 +95,7 @@
     <description>practice</description>
 
     <properties>
-        <kotlin.version>1.2.41</kotlin.version>
+        <kotlin.version>1.2.31</kotlin.version>
     </properties>
 
 
